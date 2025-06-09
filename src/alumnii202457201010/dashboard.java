@@ -5,6 +5,7 @@
 package alumnii202457201010;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
 
@@ -254,6 +255,25 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
+        String judul = "Konfirmasi";
+        String pesan = "Apakah Anda yakin ingin keluar?";
+        int optionType = JOptionPane.YES_NO_OPTION; // Menampilkan tombol Yes dan No
+        int messageType = JOptionPane.QUESTION_MESSAGE;
+        
+         int pilihan = JOptionPane.showConfirmDialog(
+            this,pesan,judul,optionType,messageType );   
+         if (pilihan == JOptionPane.YES_OPTION) {
+             System.exit(0);
+        } else if (pilihan == JOptionPane.NO_OPTION) {
+            System.out.println("User clicked No - Staying logged in.");
+        } else if (pilihan == JOptionPane.CLOSED_OPTION) {
+            System.out.println("Dialog closed without selection.");
+        }
+         
+         panelControl.removeAll();
+        panelControl.add(new panelLogout());
+        panelControl.repaint();
+        panelControl.revalidate();
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**

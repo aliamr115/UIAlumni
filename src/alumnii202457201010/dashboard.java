@@ -251,6 +251,8 @@ public class dashboard extends javax.swing.JFrame {
         panelControl.add(new panelAbout());
         panelControl.repaint();
         panelControl.revalidate();
+        
+       
     }//GEN-LAST:event_btnAboutActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed

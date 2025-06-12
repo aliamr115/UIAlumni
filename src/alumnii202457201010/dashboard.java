@@ -205,7 +205,7 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuruActionPerformed
         // TODO add your handling code here:
-         panelControl.removeAll();
+        panelControl.removeAll();
         panelControl.add(new panelGuru());
         panelControl.repaint();
         panelControl.revalidate();
@@ -218,6 +218,9 @@ public class dashboard extends javax.swing.JFrame {
         panelControl.add(new panelDashboard());
         panelControl.repaint();
         panelControl.revalidate();
+        
+       
+      
         
     }//GEN-LAST:event_btnDashboardActionPerformed
 
@@ -257,25 +260,11 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
         // TODO add your handling code here:
-        String judul = "Konfirmasi";
-        String pesan = "Apakah Anda yakin ingin keluar?";
-        int optionType = JOptionPane.YES_NO_OPTION; // Menampilkan tombol Yes dan No
-        int messageType = JOptionPane.QUESTION_MESSAGE;
-        
-         int pilihan = JOptionPane.showConfirmDialog(
-            this,pesan,judul,optionType,messageType );   
-         if (pilihan == JOptionPane.YES_OPTION) {
-             System.exit(0);
-        } else if (pilihan == JOptionPane.NO_OPTION) {
-            System.out.println("User clicked No - Staying logged in.");
-        } else if (pilihan == JOptionPane.CLOSED_OPTION) {
-            System.out.println("Dialog closed without selection.");
+        int choise = JOptionPane.showConfirmDialog(null, "Apakah Anda ingin keluar?", "Konfirmasi", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+        if (choise == JOptionPane.YES_OPTION){
+        dispose ();
+        new loginFrom().setVisible(true);
         }
-         
-         panelControl.removeAll();
-        panelControl.add(new panelLogout());
-        panelControl.repaint();
-        panelControl.revalidate();
     }//GEN-LAST:event_btnLogoutActionPerformed
 
     /**

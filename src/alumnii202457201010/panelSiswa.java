@@ -23,7 +23,7 @@ public class panelSiswa extends javax.swing.JPanel {
         ttempatLahir.setText(null);
         ttanggalLahir.setText(null);
         tHp.setText(null);
-        tAlamat.setText(null);
+        taAlamat.setText(null);
         cjenisKelamin.setSelectedItem(null);
         cKelas.setSelectedItem(null);
     }

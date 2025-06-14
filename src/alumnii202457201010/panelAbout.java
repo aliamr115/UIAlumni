@@ -122,7 +122,7 @@ public class panelAbout extends javax.swing.JPanel {
                 .addComponent(jLabel5)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel6)
-                .addGap(0, 379, Short.MAX_VALUE))
+                .addGap(0, 311, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

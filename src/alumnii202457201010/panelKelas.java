@@ -245,7 +245,7 @@ public class panelKelas extends javax.swing.JPanel {
                         .addGap(10, 10, 10)
                         .addComponent(cwaliKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(89, 89, 89)))
-                .addGap(0, 147, Short.MAX_VALUE))
+                .addGap(0, 79, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

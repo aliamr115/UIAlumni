@@ -235,7 +235,7 @@ public class panelGuru extends javax.swing.JPanel {
                     .addComponent(btnHapus)
                     .addComponent(btnUbah)
                     .addComponent(btnTambah))
-                .addContainerGap(110, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

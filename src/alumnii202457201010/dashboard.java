@@ -252,7 +252,7 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnJurusanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJurusanActionPerformed
         // TODO add your handling code here:
-         panelControl.removeAll();
+        panelControl.removeAll();
         panelControl.add(new panelJurusan());
         panelControl.repaint();
         panelControl.revalidate();
@@ -260,7 +260,7 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
         // TODO add your handling code here:
-         panelControl.removeAll();
+        panelControl.removeAll();
         panelControl.add(new panelKelas());
         panelControl.repaint();
         panelControl.revalidate();
@@ -268,7 +268,7 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
         // TODO add your handling code here:
-         panelControl.removeAll();
+        panelControl.removeAll();
         panelControl.add(new panelSiswa());
         panelControl.repaint();
         panelControl.revalidate();
@@ -276,7 +276,7 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
      // TODO add your handling code here:
-      panelControl.removeAll();
+        panelControl.removeAll();
         panelControl.add(new panelAbout());
         panelControl.repaint();
         panelControl.revalidate();

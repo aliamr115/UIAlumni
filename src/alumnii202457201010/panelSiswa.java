@@ -61,7 +61,8 @@ public class panelSiswa extends javax.swing.JPanel {
         jLabel11 = new javax.swing.JLabel();
         tHp = new javax.swing.JTextField();
         cKelas = new javax.swing.JComboBox<>();
-        tAlamat = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        taAlamat = new javax.swing.JTextArea();
 
         jPanel1.setBackground(new java.awt.Color(0, 102, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 5));
@@ -187,6 +188,10 @@ public class panelSiswa extends javax.swing.JPanel {
 
         cKelas.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
+        taAlamat.setColumns(20);
+        taAlamat.setRows(5);
+        jScrollPane2.setViewportView(taAlamat);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -221,13 +226,13 @@ public class panelSiswa extends javax.swing.JPanel {
                                     .addComponent(cjenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel10))
                                 .addGap(153, 153, 153)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel8)
                                     .addComponent(jLabel11)
                                     .addComponent(jLabel7)
-                                    .addComponent(tHp, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(tAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))))))
+                                    .addComponent(tHp, javax.swing.GroupLayout.DEFAULT_SIZE, 207, Short.MAX_VALUE)
+                                    .addComponent(cKelas, 0, 207, Short.MAX_VALUE)
+                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))))))
                 .addContainerGap(83, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -248,7 +253,7 @@ public class panelSiswa extends javax.swing.JPanel {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel11)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane2))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel4)
                         .addGap(7, 7, 7)
@@ -326,11 +331,12 @@ public class panelSiswa extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField tAlamat;
     private javax.swing.JTextField tHp;
     private javax.swing.JTextField tNama;
     private javax.swing.JTextField tNis;
+    private javax.swing.JTextArea taAlamat;
     private javax.swing.JTextField ttanggalLahir;
     private javax.swing.JTextField ttempatLahir;
     // End of variables declaration//GEN-END:variables

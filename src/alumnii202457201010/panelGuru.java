@@ -21,7 +21,7 @@ public class panelGuru extends javax.swing.JPanel {
         tNip.setText(null);
         tNama.setText(null);
         cjenisKelamin.setSelectedItem(null);
-        tAlamat.setText(null);
+        taAlamat.setText(null);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,12 +44,13 @@ public class panelGuru extends javax.swing.JPanel {
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
         tNama = new javax.swing.JTextField();
-        tAlamat = new javax.swing.JTextField();
         cjenisKelamin = new javax.swing.JComboBox<>();
         btnTambah = new javax.swing.JButton();
         btnUbah = new javax.swing.JButton();
         btnHapus = new javax.swing.JButton();
         btnReset = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        taAlamat = new javax.swing.JTextArea();
 
         jLabel1.setText("jLabel1");
 
@@ -122,13 +123,6 @@ public class panelGuru extends javax.swing.JPanel {
             }
         });
 
-        tAlamat.setHorizontalAlignment(javax.swing.JTextField.LEFT);
-        tAlamat.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                tAlamatActionPerformed(evt);
-            }
-        });
-
         cjenisKelamin.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Laki - Laki", "Perempuan" }));
 
         btnTambah.setBackground(new java.awt.Color(0, 102, 0));
@@ -175,6 +169,10 @@ public class panelGuru extends javax.swing.JPanel {
             }
         });
 
+        taAlamat.setColumns(20);
+        taAlamat.setRows(5);
+        jScrollPane2.setViewportView(taAlamat);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -194,14 +192,14 @@ public class panelGuru extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(70, 70, 70)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(tAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tNip, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(tNama, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tNip, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
+                            .addComponent(tNama, javax.swing.GroupLayout.DEFAULT_SIZE, 298, Short.MAX_VALUE)
                             .addComponent(jLabel4)
                             .addComponent(jLabel5)
-                            .addComponent(cjenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, 298, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(cjenisKelamin, 0, 298, Short.MAX_VALUE)
                             .addComponent(jLabel6)
-                            .addComponent(jLabel3))
+                            .addComponent(jLabel3)
+                            .addComponent(jScrollPane2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 61, Short.MAX_VALUE)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 476, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(51, 51, 51))
@@ -211,7 +209,7 @@ public class panelGuru extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(58, 58, 58)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel3)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -226,8 +224,8 @@ public class panelGuru extends javax.swing.JPanel {
                         .addComponent(cjenisKelamin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(tAlamat, javax.swing.GroupLayout.PREFERRED_SIZE, 187, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(11, 11, 11)
+                        .addComponent(jScrollPane2))
                     .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 389, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -266,10 +264,6 @@ public class panelGuru extends javax.swing.JPanel {
         reset();
     }//GEN-LAST:event_btnResetActionPerformed
 
-    private void tAlamatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tAlamatActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_tAlamatActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnClose;
@@ -286,9 +280,10 @@ public class panelGuru extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField tAlamat;
     private javax.swing.JTextField tNama;
     private javax.swing.JTextField tNip;
+    private javax.swing.JTextArea taAlamat;
     // End of variables declaration//GEN-END:variables
 }

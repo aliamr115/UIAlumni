@@ -65,7 +65,7 @@ public class panelDashboard extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 740, Short.MAX_VALUE)
                 .addComponent(btnClose))
         );
         jPanel1Layout.setVerticalGroup(
@@ -102,12 +102,14 @@ public class panelDashboard extends javax.swing.JPanel {
         );
 
         lbjumlahJurusan.setBackground(new java.awt.Color(204, 204, 204));
-        lbjumlahJurusan.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        lbjumlahJurusan.setText("jLabel3");
+        lbjumlahJurusan.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lbjumlahJurusan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbjumlahJurusan.setText("3");
 
         lbjumlahGuru.setBackground(new java.awt.Color(204, 204, 204));
-        lbjumlahGuru.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        lbjumlahGuru.setText("jLabel3");
+        lbjumlahGuru.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lbjumlahGuru.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbjumlahGuru.setText("45");
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -133,8 +135,9 @@ public class panelDashboard extends javax.swing.JPanel {
         );
 
         lbjumlahSiswa.setBackground(new java.awt.Color(204, 204, 204));
-        lbjumlahSiswa.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        lbjumlahSiswa.setText("jLabel3");
+        lbjumlahSiswa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lbjumlahSiswa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbjumlahSiswa.setText("550");
 
         jPanel4.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -160,8 +163,9 @@ public class panelDashboard extends javax.swing.JPanel {
         );
 
         lbjumlahKelas.setBackground(new java.awt.Color(204, 204, 204));
-        lbjumlahKelas.setFont(new java.awt.Font("Tahoma", 1, 15)); // NOI18N
-        lbjumlahKelas.setText("jLabel3");
+        lbjumlahKelas.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        lbjumlahKelas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lbjumlahKelas.setText("50");
 
         jPanel5.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -191,48 +195,48 @@ public class panelDashboard extends javax.swing.JPanel {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(100, 100, 100)
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
+            .addGroup(layout.createSequentialGroup()
+                .addGap(111, 111, 111)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbjumlahJurusan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(90, 90, 90)
+                .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbjumlahGuru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 73, Short.MAX_VALUE)
+                .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbjumlahSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(91, 91, 91)
+                .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(lbjumlahKelas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(100, 100, 100))
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(130, 130, 130)
+                .addGap(208, 208, 208)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(lbjumlahSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(lbjumlahKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
                         .addComponent(lbjumlahGuru, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(lbjumlahJurusan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 209, Short.MAX_VALUE))
+                .addGap(0, 294, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

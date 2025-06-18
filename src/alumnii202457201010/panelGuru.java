@@ -59,6 +59,7 @@ public class panelGuru extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("DATA GURU");
+        jLabel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -218,7 +219,7 @@ public class panelGuru extends javax.swing.JPanel {
                     .addComponent(btnHapus)
                     .addComponent(btnUbah)
                     .addComponent(btnTambah))
-                .addContainerGap(46, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

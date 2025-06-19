@@ -5,8 +5,13 @@
 package alumnii202457201010;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 /**
  *
@@ -35,7 +40,7 @@ public class loginFrom extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
-        tUsername = new javax.swing.JTextField();
+        tUserName = new javax.swing.JTextField();
         tPassword = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
         btnClose = new javax.swing.JButton();
@@ -89,7 +94,7 @@ public class loginFrom extends javax.swing.JFrame {
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(35, 35, 35)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(tUsername)
+                                    .addComponent(tUserName)
                                     .addComponent(tPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
                                     .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -116,7 +121,7 @@ public class loginFrom extends javax.swing.JFrame {
                 .addGap(20, 20, 20)
                 .addComponent(jLabel3)
                 .addGap(10, 10, 10)
-                .addComponent(tUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(10, 10, 10)
                 .addComponent(jLabel4)
                 .addGap(10, 10, 10)
@@ -143,7 +148,31 @@ public class loginFrom extends javax.swing.JFrame {
 
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
-        new dashboard().setVisible(true);
+       String username = tUserName.getText();
+       String password = tPassword.getText();
+       
+       if(username.length() != 0 && password.length() != 0){
+           try{
+               String sql = "SELECT * FROM user WHERE username =? AND password=md5(?)";
+               Connection con = koneksi.konek();
+               PreparedStatement ps = con.prepareStatement(sql);
+               ps.setString(1, username);
+               ps.setString(2, password);
+               ResultSet rs = ps.executeQuery();
+               
+               if (rs.next()){
+                   dispose();
+                   new dashboard().setVisible(true);
+               } else {
+                     JOptionPane.showMessageDialog(null,"Username/password salah");
+               }
+           } catch (SQLException sQLException){
+               JOptionPane.showMessageDialog(null,sQLException.getMessage());
+           }
+           
+       } else {
+           JOptionPane.showMessageDialog(null,"Username/password tidak boleh kosong");
+       }
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void btnCloseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCloseActionPerformed
@@ -183,6 +212,6 @@ public class loginFrom extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField tPassword;
-    private javax.swing.JTextField tUsername;
+    private javax.swing.JTextField tUserName;
     // End of variables declaration//GEN-END:variables
 }

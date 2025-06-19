@@ -38,7 +38,7 @@ public class panelSiswa extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lbClose = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         btnTambah = new javax.swing.JButton();
         btnUbah = new javax.swing.JButton();
@@ -72,7 +72,7 @@ public class panelSiswa extends javax.swing.JPanel {
         jLabel1.setText("DATA SISWA");
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alumnii202457201010/gambar/icons8-close-20.png"))); // NOI18N
+        lbClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alumnii202457201010/gambar/icons8-close-20.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -81,7 +81,7 @@ public class panelSiswa extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel2)
+                .addComponent(lbClose)
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -90,7 +90,7 @@ public class panelSiswa extends javax.swing.JPanel {
                 .addContainerGap(10, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel2))
+                    .addComponent(lbClose))
                 .addGap(10, 10, 10))
         );
 
@@ -310,7 +310,6 @@ public class panelSiswa extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
@@ -323,6 +322,7 @@ public class panelSiswa extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lbClose;
     private javax.swing.JTextField tHp;
     private javax.swing.JTextField tNama;
     private javax.swing.JTextField tNis;

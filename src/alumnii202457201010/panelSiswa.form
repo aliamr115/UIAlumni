@@ -16,34 +16,9 @@
   <Layout>
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
+          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
-                      <Component id="jLabel3" min="-2" pref="170" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="35" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                          <Component id="tNama" alignment="0" max="32767" attributes="0"/>
-                          <Component id="cjenisKelamin" alignment="0" pref="228" max="32767" attributes="0"/>
-                          <Component id="ttempatLahir" alignment="0" max="32767" attributes="0"/>
-                          <Component id="ttanggalLahir" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tNis" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="129" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
-                          <Component id="jScrollPane2" max="32767" attributes="0"/>
-                          <Component id="cKelas" alignment="0" max="32767" attributes="0"/>
-                          <Component id="tHp" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="203" max="-2" attributes="0"/>
                       <Component id="btnTambah" min="-2" max="-2" attributes="0"/>
@@ -56,12 +31,42 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="831" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="tFoto" min="-2" pref="186" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="54" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel6" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel9" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                                  <Component id="tNamaSiswa" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="cJenisKelamin" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tTempatLahir" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tNIS" alignment="1" pref="228" max="32767" attributes="0"/>
+                                  <Component id="tTanggal" alignment="1" max="32767" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="73" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel8" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
+                                  <Component id="jScrollPane2" max="32767" attributes="0"/>
+                                  <Component id="cKelas" alignment="0" max="32767" attributes="0"/>
+                                  <Component id="tHP" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Component id="jScrollPane1" min="-2" pref="831" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
+                      <Component id="tFotoPath" min="-2" max="-2" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace pref="62" max="32767" attributes="0"/>
           </Group>
-          <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -69,11 +74,11 @@
           <Group type="102" alignment="0" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="tHp" min="-2" max="-2" attributes="0"/>
+                      <Component id="tHP" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jLabel7" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
@@ -82,31 +87,36 @@
                       <Component id="jLabel11" min="-2" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Component id="jScrollPane2" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Component id="tNis" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Component id="tNama" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
-                      <Component id="cjenisKelamin" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" max="-2" attributes="0"/>
-                      <Component id="ttempatLahir" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="ttanggalLahir" min="-2" max="-2" attributes="0"/>
+                  <Group type="102" alignment="1" attributes="0">
+                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                          <Component id="tFoto" min="-2" pref="247" max="-2" attributes="0"/>
+                          <Group type="102" attributes="0">
+                              <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="5" max="-2" attributes="0"/>
+                              <Component id="tNIS" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Component id="jLabel5" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Component id="tNamaSiswa" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="7" max="-2" attributes="0"/>
+                              <Component id="cJenisKelamin" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" max="-2" attributes="0"/>
+                              <Component id="tTempatLahir" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="tTanggal" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="jLabel3" alignment="0" max="32767" attributes="0"/>
               </Group>
-              <EmptySpace min="-2" pref="31" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="btnReset" alignment="0" min="-2" max="-2" attributes="0"/>
                   <Group type="103" alignment="0" groupAlignment="3" attributes="0">
@@ -117,7 +127,9 @@
               </Group>
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="163" max="-2" attributes="0"/>
-              <EmptySpace pref="40" max="32767" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Component id="tFotoPath" min="-2" max="-2" attributes="0"/>
+              <EmptySpace pref="18" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -182,14 +194,25 @@
               <Image iconType="3" name="/alumnii202457201010/gambar/icons8-close-20.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbCloseMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="jLabel3">
+    <Component class="javax.swing.JLabel" name="tFoto">
       <Properties>
         <Property name="horizontalAlignment" type="int" value="0"/>
         <Property name="text" type="java.lang.String" value="FOTO"/>
+        <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
+          <Border info="org.netbeans.modules.form.compat2.border.LineBorderInfo">
+            <LineBorder/>
+          </Border>
+        </Property>
       </Properties>
+      <Events>
+        <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tFotoMouseClicked"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnTambah">
       <Properties>
@@ -278,7 +301,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable1">
+        <Component class="javax.swing.JTable" name="tblSiswa">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="4" rowCount="4">
@@ -289,6 +312,9 @@
               </Table>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblSiswaMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -348,11 +374,11 @@
         <Property name="text" type="java.lang.String" value="Tempat Lahir"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tNis">
+    <Component class="javax.swing.JTextField" name="tNIS">
     </Component>
-    <Component class="javax.swing.JTextField" name="tNama">
+    <Component class="javax.swing.JTextField" name="tNamaSiswa">
     </Component>
-    <Component class="javax.swing.JComboBox" name="cjenisKelamin">
+    <Component class="javax.swing.JComboBox" name="cJenisKelamin">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
           <StringArray count="2">
@@ -365,9 +391,7 @@
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JTextField" name="ttempatLahir">
-    </Component>
-    <Component class="javax.swing.JTextField" name="ttanggalLahir">
+    <Component class="javax.swing.JTextField" name="tTempatLahir">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel11">
       <Properties>
@@ -377,7 +401,7 @@
         <Property name="text" type="java.lang.String" value="Alamat"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tHp">
+    <Component class="javax.swing.JTextField" name="tHP">
     </Component>
     <Component class="javax.swing.JComboBox" name="cKelas">
       <Properties>
@@ -400,7 +424,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTextArea" name="jTextArea1">
+        <Component class="javax.swing.JTextArea" name="tAlamat">
           <Properties>
             <Property name="columns" type="int" value="20"/>
             <Property name="rows" type="int" value="5"/>
@@ -408,5 +432,18 @@
         </Component>
       </SubComponents>
     </Container>
+    <Component class="com.toedter.calendar.JDateChooser" name="tTanggal">
+      <Properties>
+        <Property name="dateFormatString" type="java.lang.String" value="yyyy-MM-dd"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="tFotoPath">
+      <Properties>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="jLabel2"/>
+      </Properties>
+    </Component>
   </SubComponents>
 </Form>

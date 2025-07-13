@@ -3,6 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package alumnii202457201010;
+import java.sql.Connection;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import java.sql.*;
 
 /**
  *
@@ -15,6 +20,52 @@ public class panelDashboard extends javax.swing.JPanel {
      */
     public panelDashboard() {
         initComponents();
+        isiJumlahDataDasbor();
+    }
+    
+    private void isiJumlahDataDasbor(){
+        Connection conn = koneksi.konek();
+        
+        try {
+            String sqlJurusan = "SELECT COUNT(*) AS jumlah FROM jurusan";
+            Statement psJurusan = conn.createStatement(); //membuat pernyataan dari database diambil dari koneksi tersebut(conn)
+            ResultSet rsJurusan = psJurusan.executeQuery(sqlJurusan); //mengambil hasil dengan nama variabel rsJurusan
+            
+            if(rsJurusan.next()){
+                int jumlah = rsJurusan.getInt("jumlah");
+                tJumlahJurusan.setText(String.valueOf(jumlah));
+            }
+            
+            String sqlGuru = "SELECT COUNT(*) AS jumlah FROM guru";
+            Statement psGuru = conn.createStatement();
+            ResultSet rsGuru = psGuru.executeQuery(sqlGuru);
+            
+            if(rsGuru.next()){
+                int jumlah = rsGuru.getInt("jumlah");
+                tJumlahGuru.setText(String.valueOf(jumlah));
+            }
+            
+            String sqlSiswa = "SELECT COUNT(*) AS jumlah FROM siswa";
+            Statement psSiswa = conn.createStatement();
+            ResultSet rsSiswa = psSiswa.executeQuery(sqlSiswa);
+            
+            if(rsSiswa.next()){
+                int jumlah = rsSiswa.getInt("jumlah");
+                tJumlahSiswa.setText(String.valueOf(jumlah));
+            }
+            
+            String sqlKelas = "SELECT COUNT(*) AS jumlah FROM kelas";
+            Statement psKelas = conn.createStatement();
+            ResultSet rsKelas = psKelas.executeQuery(sqlKelas);
+            
+            if(rsKelas.next()){
+                int jumlah = rsKelas.getInt("jumlah");
+                tJumlahKelas.setText(String.valueOf(jumlah));
+            }
+        } catch (SQLException e){
+            System.out.println("Gagal mengambil jumlah data");
+            System.out.println(e);
+        }
     }
  
     /**
@@ -31,14 +82,14 @@ public class panelDashboard extends javax.swing.JPanel {
         lbClose = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        lbjumlahJurusan = new javax.swing.JLabel();
-        lbjumlahGuru = new javax.swing.JLabel();
+        tJumlahJurusan = new javax.swing.JLabel();
+        tJumlahGuru = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
-        lbjumlahSiswa = new javax.swing.JLabel();
+        tJumlahSiswa = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
-        lbjumlahKelas = new javax.swing.JLabel();
+        tJumlahKelas = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         jLabel9 = new javax.swing.JLabel();
 
@@ -51,6 +102,11 @@ public class panelDashboard extends javax.swing.JPanel {
         jLabel2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
 
         lbClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alumnii202457201010/gambar/icons8-close-20.png"))); // NOI18N
+        lbClose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbCloseMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -95,15 +151,15 @@ public class panelDashboard extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lbjumlahJurusan.setBackground(new java.awt.Color(204, 204, 204));
-        lbjumlahJurusan.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lbjumlahJurusan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbjumlahJurusan.setText("3");
+        tJumlahJurusan.setBackground(new java.awt.Color(204, 204, 204));
+        tJumlahJurusan.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        tJumlahJurusan.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tJumlahJurusan.setText("3");
 
-        lbjumlahGuru.setBackground(new java.awt.Color(204, 204, 204));
-        lbjumlahGuru.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lbjumlahGuru.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbjumlahGuru.setText("45");
+        tJumlahGuru.setBackground(new java.awt.Color(204, 204, 204));
+        tJumlahGuru.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        tJumlahGuru.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tJumlahGuru.setText("45");
 
         jPanel3.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -128,10 +184,9 @@ public class panelDashboard extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lbjumlahSiswa.setBackground(new java.awt.Color(204, 204, 204));
-        lbjumlahSiswa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lbjumlahSiswa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbjumlahSiswa.setText("550");
+        tJumlahSiswa.setBackground(new java.awt.Color(204, 204, 204));
+        tJumlahSiswa.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        tJumlahSiswa.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         jPanel4.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -156,10 +211,10 @@ public class panelDashboard extends javax.swing.JPanel {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        lbjumlahKelas.setBackground(new java.awt.Color(204, 204, 204));
-        lbjumlahKelas.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
-        lbjumlahKelas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lbjumlahKelas.setText("50");
+        tJumlahKelas.setBackground(new java.awt.Color(204, 204, 204));
+        tJumlahKelas.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        tJumlahKelas.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        tJumlahKelas.setText("50");
 
         jPanel5.setBackground(new java.awt.Color(0, 102, 102));
 
@@ -191,19 +246,19 @@ public class panelDashboard extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(111, 111, 111)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbjumlahJurusan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tJumlahJurusan, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbjumlahGuru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tJumlahGuru, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbjumlahSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tJumlahSiswa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(80, 80, 80)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(lbjumlahKelas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(tJumlahKelas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(102, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -217,20 +272,27 @@ public class panelDashboard extends javax.swing.JPanel {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(lbjumlahSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tJumlahSiswa, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(lbjumlahKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tJumlahKelas, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, 0)
-                        .addComponent(lbjumlahGuru, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(tJumlahGuru, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(lbjumlahJurusan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(tJumlahJurusan, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 101, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 226, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lbCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbCloseMouseClicked
+        // TODO add your handling code here:
+        removeAll();
+        revalidate();
+        repaint();
+    }//GEN-LAST:event_lbCloseMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -245,9 +307,9 @@ public class panelDashboard extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JLabel lbClose;
-    private javax.swing.JLabel lbjumlahGuru;
-    private javax.swing.JLabel lbjumlahJurusan;
-    private javax.swing.JLabel lbjumlahKelas;
-    private javax.swing.JLabel lbjumlahSiswa;
+    private javax.swing.JLabel tJumlahGuru;
+    private javax.swing.JLabel tJumlahJurusan;
+    private javax.swing.JLabel tJumlahKelas;
+    private javax.swing.JLabel tJumlahSiswa;
     // End of variables declaration//GEN-END:variables
 }

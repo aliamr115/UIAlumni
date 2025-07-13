@@ -29,7 +29,7 @@
               <EmptySpace type="separate" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Component id="panelControl" min="-2" pref="956" max="-2" attributes="0"/>
+                      <Component id="Content" min="-2" pref="956" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="15" max="32767" attributes="0"/>
                   </Group>
                   <Component id="jPanel1" max="32767" attributes="0"/>
@@ -43,7 +43,7 @@
           <Group type="102" attributes="0">
               <Component id="jPanel1" min="-2" max="-2" attributes="0"/>
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Component id="panelControl" min="-2" pref="630" max="-2" attributes="0"/>
+              <Component id="Content" min="-2" pref="630" max="-2" attributes="0"/>
               <EmptySpace max="32767" attributes="0"/>
           </Group>
           <Component id="panelSidebar" max="32767" attributes="0"/>
@@ -300,10 +300,10 @@
         </Component>
       </SubComponents>
     </Container>
-    <Container class="javax.swing.JPanel" name="panelControl">
+    <Container class="javax.swing.JPanel" name="Content">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="66" red="ff" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
 
@@ -312,7 +312,7 @@
     <Container class="javax.swing.JPanel" name="jPanel1">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-          <Color blue="66" green="66" red="66" type="rgb"/>
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
         </Property>
       </Properties>
 

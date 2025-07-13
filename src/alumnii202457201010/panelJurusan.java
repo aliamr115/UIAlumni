@@ -4,6 +4,14 @@
  */
 package alumnii202457201010;
 
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.sql.Statement;
+import java.sql.ResultSet;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author user
@@ -16,12 +24,41 @@ public class panelJurusan extends javax.swing.JPanel {
     public panelJurusan() {
         initComponents();
         reset();
+        load_tabel_jurusan();
     }
+    
     void reset(){
-        tkodeJurusan.setText(null);
-        tnamaJurusan.setText(null);
-        
+        tKodeJurusan.setText(null); //kosongkan isi text field kode jurusan
+        tKodeJurusan.setEditable(true); //aktifkan kembali text fiedl kode jurusan agar bisa diedit
+        tNamaJurusan.setText(null); //kosongkan isi text field nama jurusan    
     }
+    
+    void load_tabel_jurusan(){
+        DefaultTableModel model = new DefaultTableModel();
+        model.addColumn("Kode Jurusan");
+        model.addColumn("Nama Jurusan");
+        
+        String sql = "SELECT * FROM jurusan";
+        
+        try{
+        Connection conn = koneksi.konek();
+        Statement st = conn.createStatement();
+        ResultSet rs = st.executeQuery(sql);
+        
+        while (rs.next()){
+            String kodeJurusan = rs.getString("kode_jur");
+            String namaJurusan = rs.getString("nama_jurusan");
+            Object[] baris = {kodeJurusan, namaJurusan};
+            model.addRow(baris);
+        }
+        
+        
+    } catch (SQLException sQLException){
+        JOptionPane.showMessageDialog(null, "Gagal mengambil data!");
+    }
+        tblJurusan.setModel(model);
+    }
+    
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -37,10 +74,10 @@ public class panelJurusan extends javax.swing.JPanel {
         lbClose = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        tkodeJurusan = new javax.swing.JTextField();
-        tnamaJurusan = new javax.swing.JTextField();
+        tKodeJurusan = new javax.swing.JTextField();
+        tNamaJurusan = new javax.swing.JTextField();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
+        tblJurusan = new javax.swing.JTable();
         btnTambah = new javax.swing.JButton();
         btnUbah = new javax.swing.JButton();
         btnHapus = new javax.swing.JButton();
@@ -57,6 +94,11 @@ public class panelJurusan extends javax.swing.JPanel {
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
 
         lbClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alumnii202457201010/gambar/icons8-close-20.png"))); // NOI18N
+        lbClose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbCloseMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -71,13 +113,10 @@ public class panelJurusan extends javax.swing.JPanel {
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(10, 10, 10)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel1))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(lbClose)))
+                    .addComponent(jLabel1)
+                    .addComponent(lbClose))
                 .addContainerGap(10, Short.MAX_VALUE))
         );
 
@@ -87,7 +126,7 @@ public class panelJurusan extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jLabel3.setText("Nama Jurusan");
 
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        tblJurusan.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
                 {null, null, null, null},
@@ -98,7 +137,12 @@ public class panelJurusan extends javax.swing.JPanel {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
-        jScrollPane1.setViewportView(jTable1);
+        tblJurusan.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                tblJurusanMouseClicked(evt);
+            }
+        });
+        jScrollPane1.setViewportView(tblJurusan);
 
         btnTambah.setBackground(new java.awt.Color(0, 102, 0));
         btnTambah.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -155,13 +199,13 @@ public class panelJurusan extends javax.swing.JPanel {
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(tkodeJurusan, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(tKodeJurusan, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel2))
                                 .addGap(39, 39, 39)
                                 .addComponent(jLabel3))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(259, 259, 259)
-                                .addComponent(tnamaJurusan, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(tNamaJurusan, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(43, 43, 43)
                                 .addComponent(btnTambah)
@@ -187,8 +231,8 @@ public class panelJurusan extends javax.swing.JPanel {
                     .addComponent(jLabel3))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(tkodeJurusan, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(tnamaJurusan))
+                    .addComponent(tKodeJurusan, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
+                    .addComponent(tNamaJurusan))
                 .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUbah)
@@ -214,20 +258,90 @@ public class panelJurusan extends javax.swing.JPanel {
 
     private void btnUbahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUbahActionPerformed
         // TODO add your handling code here:
+        String kodeJurusan = tKodeJurusan.getText();
+        String namaJurusan = tNamaJurusan.getText();
+        String sql = "UPDATE jurusan SET nama_jurusan=? WHERE kode_jur=?";
+        
+        try {
+            Connection conn = koneksi.konek();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1, namaJurusan);
+            ps.setString(2, kodeJurusan);
+            ps.execute();
+            
+            JOptionPane.showMessageDialog(null, "Data berhasil diubah!");
+        } catch (SQLException sQLException){
+            JOptionPane.showMessageDialog(null,"Data gagal diubah!");
+            System.out.println(sQLException);
+        }
+        load_tabel_jurusan();
+        reset();
     }//GEN-LAST:event_btnUbahActionPerformed
 
     private void btnTambahActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTambahActionPerformed
         // TODO add your handling code here:
+        String kodeJurusan = tKodeJurusan.getText();
+        String namaJurusan = tNamaJurusan.getText();
+        String sql = "INSERT INTO jurusan(kode_jur,nama_jurusan) VALUES(?,?)";
+        
+        try{
+            Connection conn = koneksi.konek();
+            PreparedStatement ps = conn.prepareStatement(sql); 
+            
+            ps.setString(1,kodeJurusan);
+            ps.setString(2, namaJurusan);
+            ps.execute();
+            
+            JOptionPane.showMessageDialog(null,"Data berhasil disimpan!");
+        } catch (SQLException sQLException){
+            JOptionPane.showMessageDialog(null,"Data gagal disimpan!");
+        }
+        load_tabel_jurusan();
+        reset();
     }//GEN-LAST:event_btnTambahActionPerformed
 
     private void btnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHapusActionPerformed
         // TODO add your handling code here:
+        String kodeJurusan = tKodeJurusan.getText();
+     
+        String sql = "DELETE FROM jurusan WHERE kode_jur=?";
+        
+        try{
+            Connection conn = koneksi.konek();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setString(1,kodeJurusan);
+            ps.execute();
+            
+            JOptionPane.showMessageDialog(null,"Data berhasil dihapus!");
+        } catch (SQLException sQLException){
+            JOptionPane.showMessageDialog(null,"Data gagal dihapus!");
+        }
+        load_tabel_jurusan();
+        reset();
     }//GEN-LAST:event_btnHapusActionPerformed
 
     private void btnResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnResetActionPerformed
         // TODO add your handling code here:
         reset();
     }//GEN-LAST:event_btnResetActionPerformed
+
+    private void lbCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbCloseMouseClicked
+        // TODO add your handling code here:
+        removeAll();
+        revalidate();
+        repaint();
+    }//GEN-LAST:event_lbCloseMouseClicked
+
+    private void tblJurusanMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_tblJurusanMouseClicked
+        // TODO add your handling code here:
+        int barisYangDipilih = tblJurusan.rowAtPoint(evt.getPoint());
+        String kodeJurusan = tblJurusan.getValueAt(barisYangDipilih,0).toString();
+        String namaJurusan = tblJurusan.getValueAt(barisYangDipilih,1).toString();
+        
+        tKodeJurusan.setText(kodeJurusan);
+        tKodeJurusan.setEditable(false);
+        tNamaJurusan.setText(namaJurusan);
+    }//GEN-LAST:event_tblJurusanMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -241,9 +355,9 @@ public class panelJurusan extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
     private javax.swing.JLabel lbClose;
-    private javax.swing.JTextField tkodeJurusan;
-    private javax.swing.JTextField tnamaJurusan;
+    private javax.swing.JTextField tKodeJurusan;
+    private javax.swing.JTextField tNamaJurusan;
+    private javax.swing.JTable tblJurusan;
     // End of variables declaration//GEN-END:variables
 }

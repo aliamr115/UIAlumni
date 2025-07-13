@@ -43,6 +43,11 @@ public class panelAbout extends javax.swing.JPanel {
         jLabel1.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 10, 1, 1));
 
         lbClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alumnii202457201010/gambar/icons8-close-20.png"))); // NOI18N
+        lbClose.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lbCloseMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -116,6 +121,13 @@ public class panelAbout extends javax.swing.JPanel {
                 .addGap(0, 311, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void lbCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbCloseMouseClicked
+        // TODO add your handling code here:
+        removeAll();
+        revalidate();
+        repaint();
+    }//GEN-LAST:event_lbCloseMouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

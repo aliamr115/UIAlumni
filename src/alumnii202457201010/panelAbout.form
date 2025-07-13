@@ -104,6 +104,9 @@
               <Image iconType="3" name="/alumnii202457201010/gambar/icons8-close-20.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbCloseMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>

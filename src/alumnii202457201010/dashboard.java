@@ -5,6 +5,7 @@
 package alumnii202457201010;
 
 import com.formdev.flatlaf.FlatLightLaf;
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import javax.swing.UIManager;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -14,13 +15,16 @@ import javax.swing.UnsupportedLookAndFeelException;
  * @author user
  */
 public class dashboard extends javax.swing.JFrame {
-
     /**
      * Creates new form dashboard
      */
     public dashboard() {
-        initComponents();
+        initComponents();  
+        
     }
+    
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -40,7 +44,7 @@ public class dashboard extends javax.swing.JFrame {
         btnSiswa = new javax.swing.JButton();
         btnAbout = new javax.swing.JButton();
         btnLogout = new javax.swing.JButton();
-        panelControl = new javax.swing.JPanel();
+        Content = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         lbClose = new javax.swing.JLabel();
 
@@ -182,10 +186,10 @@ public class dashboard extends javax.swing.JFrame {
                 .addContainerGap(197, Short.MAX_VALUE))
         );
 
-        panelControl.setBackground(new java.awt.Color(255, 102, 102));
-        panelControl.setLayout(new java.awt.BorderLayout());
+        Content.setBackground(new java.awt.Color(255, 255, 255));
+        Content.setLayout(new java.awt.BorderLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 102));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         lbClose.setIcon(new javax.swing.ImageIcon(getClass().getResource("/alumnii202457201010/gambar/iconCLOSE.png"))); // NOI18N
         lbClose.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -220,7 +224,7 @@ public class dashboard extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(panelControl, javax.swing.GroupLayout.PREFERRED_SIZE, 956, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, 956, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 15, Short.MAX_VALUE))
                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
@@ -230,7 +234,7 @@ public class dashboard extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(panelControl, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Content, javax.swing.GroupLayout.PREFERRED_SIZE, 630, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(panelSidebar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
@@ -241,57 +245,50 @@ public class dashboard extends javax.swing.JFrame {
 
     private void btnGuruActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuruActionPerformed
         // TODO add your handling code here:
-        panelControl.removeAll();
-        panelControl.add(new panelGuru());
-        panelControl.repaint();
-        panelControl.revalidate();
-        
+        Content.removeAll();
+        Content.add(new panelGuru());
+        Content.repaint();
+        Content.revalidate();
     }//GEN-LAST:event_btnGuruActionPerformed
 
     private void btnDashboardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDashboardActionPerformed
         // TODO add your handling code here:
-        panelControl.removeAll();
-        panelControl.add(new panelDashboard());
-        panelControl.repaint();
-        panelControl.revalidate();
-        
-       
-      
-        
+        Content.removeAll();
+        Content.add(new panelDashboard());
+        Content.repaint();
+        Content.revalidate();
     }//GEN-LAST:event_btnDashboardActionPerformed
 
     private void btnJurusanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnJurusanActionPerformed
         // TODO add your handling code here:
-        panelControl.removeAll();
-        panelControl.add(new panelJurusan());
-        panelControl.repaint();
-        panelControl.revalidate();
+        Content.removeAll();
+        Content.add(new panelJurusan());
+        Content.repaint();
+        Content.revalidate();
     }//GEN-LAST:event_btnJurusanActionPerformed
 
     private void btnKelasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnKelasActionPerformed
         // TODO add your handling code here:
-        panelControl.removeAll();
-        panelControl.add(new panelKelas());
-        panelControl.repaint();
-        panelControl.revalidate();
+        Content.removeAll();
+        Content.add(new panelKelas());
+        Content.repaint();
+        Content.revalidate();
     }//GEN-LAST:event_btnKelasActionPerformed
 
     private void btnSiswaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiswaActionPerformed
         // TODO add your handling code here:
-        panelControl.removeAll();
-        panelControl.add(new panelSiswa());
-        panelControl.repaint();
-        panelControl.revalidate();
+        Content.removeAll();
+        Content.add(new panelSiswa());
+        Content.repaint();
+        Content.revalidate();
     }//GEN-LAST:event_btnSiswaActionPerformed
 
     private void btnAboutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAboutActionPerformed
      // TODO add your handling code here:
-        panelControl.removeAll();
-        panelControl.add(new panelAbout());
-        panelControl.repaint();
-        panelControl.revalidate();
-        
-       
+        Content.removeAll();
+        Content.add(new panelAbout());
+        Content.repaint();
+        Content.revalidate();
     }//GEN-LAST:event_btnAboutActionPerformed
 
     private void btnLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLogoutActionPerformed
@@ -305,9 +302,7 @@ public class dashboard extends javax.swing.JFrame {
 
     private void lbCloseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lbCloseMouseClicked
         // TODO add your handling code here:
-        removeAll();
-        revalidate();
-        repaint();
+        System.exit(0);
     }//GEN-LAST:event_lbCloseMouseClicked
 
     /**
@@ -334,6 +329,7 @@ public class dashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel Content;
     private javax.swing.JButton btnAbout;
     private javax.swing.JButton btnDashboard;
     private javax.swing.JButton btnGuru;
@@ -344,7 +340,6 @@ public class dashboard extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lbClose;
-    private javax.swing.JPanel panelControl;
     private javax.swing.JPanel panelSidebar;
     // End of variables declaration//GEN-END:variables
 }

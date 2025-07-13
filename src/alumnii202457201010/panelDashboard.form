@@ -19,22 +19,22 @@
           <Group type="102" alignment="0" attributes="0">
               <EmptySpace min="-2" pref="111" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="lbjumlahJurusan" max="32767" attributes="0"/>
+                  <Component id="tJumlahJurusan" max="32767" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="lbjumlahGuru" max="32767" attributes="0"/>
+                  <Component id="tJumlahGuru" max="32767" attributes="0"/>
                   <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="lbjumlahSiswa" max="32767" attributes="0"/>
+                  <Component id="tJumlahSiswa" max="32767" attributes="0"/>
                   <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="80" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                  <Component id="lbjumlahKelas" max="32767" attributes="0"/>
+                  <Component id="tJumlahKelas" max="32767" attributes="0"/>
                   <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace pref="102" max="32767" attributes="0"/>
@@ -51,20 +51,20 @@
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jPanel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="lbjumlahSiswa" min="-2" pref="101" max="-2" attributes="0"/>
+                      <Component id="tJumlahSiswa" min="-2" pref="101" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jPanel5" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="lbjumlahKelas" min="-2" pref="101" max="-2" attributes="0"/>
+                      <Component id="tJumlahKelas" min="-2" pref="101" max="-2" attributes="0"/>
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="0" pref="0" max="-2" attributes="0"/>
-                      <Component id="lbjumlahGuru" min="-2" pref="101" max="-2" attributes="0"/>
+                      <Component id="tJumlahGuru" min="-2" pref="101" max="-2" attributes="0"/>
                   </Group>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <Component id="lbjumlahJurusan" alignment="1" min="-2" pref="101" max="-2" attributes="0"/>
+                  <Component id="tJumlahJurusan" alignment="1" min="-2" pref="101" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="0" pref="226" max="32767" attributes="0"/>
           </Group>
@@ -131,6 +131,9 @@
               <Image iconType="3" name="/alumnii202457201010/gambar/icons8-close-20.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbCloseMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -175,7 +178,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="lbjumlahJurusan">
+    <Component class="javax.swing.JLabel" name="tJumlahJurusan">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -187,7 +190,7 @@
         <Property name="text" type="java.lang.String" value="3"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JLabel" name="lbjumlahGuru">
+    <Component class="javax.swing.JLabel" name="tJumlahGuru">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -240,7 +243,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="lbjumlahSiswa">
+    <Component class="javax.swing.JLabel" name="tJumlahSiswa">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>
@@ -249,7 +252,6 @@
           <Font name="Tahoma" size="24" style="1"/>
         </Property>
         <Property name="horizontalAlignment" type="int" value="0"/>
-        <Property name="text" type="java.lang.String" value="550"/>
       </Properties>
     </Component>
     <Container class="javax.swing.JPanel" name="jPanel4">
@@ -293,7 +295,7 @@
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JLabel" name="lbjumlahKelas">
+    <Component class="javax.swing.JLabel" name="tJumlahKelas">
       <Properties>
         <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
           <Color blue="cc" green="cc" red="cc" type="rgb"/>

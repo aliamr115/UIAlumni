@@ -17,38 +17,35 @@
     <DimensionLayout dim="0">
       <Group type="103" groupAlignment="0" attributes="0">
           <Group type="102" alignment="1" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Component id="btnTambah" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="btnUbah" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="btnHapus" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Component id="btnReset" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
-                          <Component id="tnamaKelas" max="32767" attributes="0"/>
-                          <Component id="tkodeKelas" max="32767" attributes="0"/>
-                          <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="cTingkatan" alignment="0" max="32767" attributes="0"/>
-                          <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="cJurusan" alignment="0" max="32767" attributes="0"/>
-                          <Component id="cwaliKelas" alignment="0" min="-2" pref="323" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace pref="64" max="32767" attributes="0"/>
-                      <Component id="jScrollPane1" min="-2" pref="440" max="-2" attributes="0"/>
-                  </Group>
-              </Group>
+              <EmptySpace pref="431" max="32767" attributes="0"/>
+              <Component id="btnTambah" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="btnUbah" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="btnHapus" min="-2" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+              <Component id="btnReset" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="75" max="-2" attributes="0"/>
           </Group>
           <Component id="jPanel1" alignment="0" max="32767" attributes="0"/>
+          <Group type="102" alignment="0" attributes="0">
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
+                  <Component id="tNamaKelas" max="32767" attributes="0"/>
+                  <Component id="tKodeKelas" max="32767" attributes="0"/>
+                  <Component id="jLabel3" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel4" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="cTingkatan" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jLabel5" alignment="0" min="-2" max="-2" attributes="0"/>
+                  <Component id="cJurusan" alignment="0" max="32767" attributes="0"/>
+                  <Component id="cWali" alignment="0" min="-2" pref="323" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="jScrollPane1" min="-2" pref="482" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+          </Group>
       </Group>
     </DimensionLayout>
     <DimensionLayout dim="1">
@@ -72,11 +69,11 @@
                   <Group type="102" alignment="1" attributes="0">
                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="tkodeKelas" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="tKodeKelas" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="tnamaKelas" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="tNamaKelas" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
@@ -88,7 +85,7 @@
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
                       <Component id="jLabel6" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="10" max="-2" attributes="0"/>
-                      <Component id="cwaliKelas" min="-2" pref="32" max="-2" attributes="0"/>
+                      <Component id="cWali" min="-2" pref="32" max="-2" attributes="0"/>
                       <EmptySpace min="-2" pref="89" max="-2" attributes="0"/>
                   </Group>
               </Group>
@@ -157,6 +154,9 @@
               <Image iconType="3" name="/alumnii202457201010/gambar/icons8-close-20.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="lbCloseMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
@@ -200,9 +200,9 @@
         <Property name="text" type="java.lang.String" value="Wali Kelas"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="tkodeKelas">
+    <Component class="javax.swing.JTextField" name="tKodeKelas">
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tkodeKelasActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tKodeKelasActionPerformed"/>
       </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
@@ -212,7 +212,7 @@
 
       <Layout class="org.netbeans.modules.form.compat2.layouts.support.JScrollPaneSupportLayout"/>
       <SubComponents>
-        <Component class="javax.swing.JTable" name="jTable1">
+        <Component class="javax.swing.JTable" name="tblKelas">
           <Properties>
             <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
               <Table columnCount="4" rowCount="4">
@@ -223,23 +223,24 @@
               </Table>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="tblKelasMouseClicked"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
-    <Component class="javax.swing.JTextField" name="tnamaKelas">
+    <Component class="javax.swing.JTextField" name="tNamaKelas">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="tNamaKelasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JComboBox" name="cTingkatan">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="8">
-            <StringItem index="0" value="1"/>
-            <StringItem index="1" value="2"/>
-            <StringItem index="2" value="3"/>
-            <StringItem index="3" value="4"/>
-            <StringItem index="4" value="5"/>
-            <StringItem index="5" value="6"/>
-            <StringItem index="6" value="7"/>
-            <StringItem index="7" value="8"/>
+          <StringArray count="3">
+            <StringItem index="0" value="10"/>
+            <StringItem index="1" value="11"/>
+            <StringItem index="2" value="12"/>
           </StringArray>
         </Property>
       </Properties>
@@ -250,26 +251,17 @@
     <Component class="javax.swing.JComboBox" name="cJurusan">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="3">
-            <StringItem index="0" value="RPL"/>
-            <StringItem index="1" value="DKV"/>
-            <StringItem index="2" value="OTO"/>
-          </StringArray>
+          <StringArray count="0"/>
         </Property>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
       </AuxValues>
     </Component>
-    <Component class="javax.swing.JComboBox" name="cwaliKelas">
+    <Component class="javax.swing.JComboBox" name="cWali">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="4">
-            <StringItem index="0" value="Item 1"/>
-            <StringItem index="1" value="Item 2"/>
-            <StringItem index="2" value="Item 3"/>
-            <StringItem index="3" value="Item 4"/>
-          </StringArray>
+          <StringArray count="0"/>
         </Property>
       </Properties>
       <AuxValues>

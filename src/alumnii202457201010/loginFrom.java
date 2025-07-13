@@ -15,7 +15,7 @@ import java.sql.SQLException;
 
 /**
  *
- * @author user
+ * @author aliamr
  */
 public class loginFrom extends javax.swing.JFrame {
 
@@ -41,9 +41,9 @@ public class loginFrom extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         tUserName = new javax.swing.JTextField();
-        tPassword = new javax.swing.JTextField();
         btnLogin = new javax.swing.JButton();
         btnClose = new javax.swing.JButton();
+        tPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -92,16 +92,16 @@ public class loginFrom extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(88, 88, 88)
+                                .addComponent(jLabel2))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
                                 .addGap(35, 35, 35)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(tUserName)
-                                    .addComponent(tPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
-                                    .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(88, 88, 88)
-                                .addComponent(jLabel2)))
+                                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(tPassword))))
                         .addGap(0, 36, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -125,8 +125,8 @@ public class loginFrom extends javax.swing.JFrame {
                 .addGap(10, 10, 10)
                 .addComponent(jLabel4)
                 .addGap(10, 10, 10)
-                .addComponent(tPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 38, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28)
+                .addComponent(tPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(btnLogin)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -166,7 +166,7 @@ public class loginFrom extends javax.swing.JFrame {
                } else {
                      JOptionPane.showMessageDialog(null,"Username/password salah");
                }
-           } catch (SQLException sQLException){
+            } catch (SQLException sQLException){
                JOptionPane.showMessageDialog(null,sQLException.getMessage());
            }
            
@@ -211,7 +211,7 @@ public class loginFrom extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField tPassword;
+    private javax.swing.JPasswordField tPassword;
     private javax.swing.JTextField tUserName;
     // End of variables declaration//GEN-END:variables
 }
